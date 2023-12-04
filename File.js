@@ -1,41 +1,29 @@
 /*
-    SWAPPING TWO VARIABLES IN PYTHON
+    MEMBERSHIP OPERATOR IN PYTHON
 
-    a = 45
-    b = 55
-
-    a,b = b,a
-
-    a1 = 21
-    b1 = 79
-
-    temp = a1
-    a1 = b1
-    b1 = temp 
-    
+    'abc' in 'abcfghd'
+    'g' in [1,32,4.'g']
+     1 in {1,2,3,4,5}
 */
 
 
-// Method1
-var a1 = 55;
-var b1 = 45;
+const str1 = 'checkForMembershipOperator';
+const arr1 = [1,2,3,4,5,6];
+const set1 = new Set([1,2,3,6,4,8]);
+const obj1 = {'a' : 'a1' , 'b' : 'b1' , 'c' : 'c1'}
 
-console.log(`Before Swapping: a1=> ${a1} b1=> ${b1}`);
-// Swapping
+console.log('String')
+console.log(str1.includes('x'));
+console.log(`Carefully look into this: " ${str1.includes('c') === str1.includes('Mem') === str1.includes('Op')} "`);
 
-var tempVar = a1;
-a1 = b1;
-b1 = tempVar;
+console.log('Array')
+console.log(arr1.includes('x'));
+console.log(arr1.includes(1) === arr1.includes(4) === arr1.includes(5));
 
-console.log(`After Swapping : a1=> ${a1} b1=> ${b1}`);
+console.log('Sets')
+console.log(set1.has(1));
+console.log(set1.has('x'));
 
-
-// Method2
-var a2 = 31;
-var b2 = 69;
-
-console.log(`Before Swapping: a2=> ${a1} b2=> ${b1}`);
-
-[a1 , b1] = [b1 , a1]
-
-console.log(`Before Swapping: a2=> ${a1} b2=> ${b1}`);
+console.log('Objects')
+console.log('a' in obj1);
+console.log(obj1.hasOwnProperty('a'))
