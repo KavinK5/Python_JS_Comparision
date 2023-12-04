@@ -1,21 +1,41 @@
 /*
-    ITERATING LIST/TUPLE IN PYTHON
+    SWAPPING TWO VARIABLES IN PYTHON
 
-    L = range(10)
-    for j in L:
-        print(j,end=' ')
+    a = 45
+    b = 55
+
+    a,b = b,a
+
+    a1 = 21
+    b1 = 79
+
+    temp = a1
+    a1 = b1
+    b1 = temp 
     
 */
 
 
-const array1 = [1,5,9,7,8,6,3];
+// Method1
+var a1 = 55;
+var b1 = 45;
 
-for (var k of array1){
-    console.log(k);
-}
+console.log(`Before Swapping: a1=> ${a1} b1=> ${b1}`);
+// Swapping
 
-console.log('Here comes second iteration');
+var tempVar = a1;
+a1 = b1;
+b1 = tempVar;
 
-array1.forEach((itr) => {
-    console.log(itr);
-})
+console.log(`After Swapping : a1=> ${a1} b1=> ${b1}`);
+
+
+// Method2
+var a2 = 31;
+var b2 = 69;
+
+console.log(`Before Swapping: a2=> ${a1} b2=> ${b1}`);
+
+[a1 , b1] = [b1 , a1]
+
+console.log(`Before Swapping: a2=> ${a1} b2=> ${b1}`);
